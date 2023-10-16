@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadoura</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <table>
+          <tr>
+            <img src="Imagem/Logo.jpg" alt="logo" scr="logo.jpg">
+          </tr>
+        </table>
+      </header>
+        
+      <div class="topnav" id="myTopnav">
+      <a href="PaginaInicial.html">Pagina Inicial</a>
+      <a href="QuemSomos.html">Quem Somos</a>  
+      <div class="dropdown">
+        <button class="dropbtn">Aluguel
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="BMW.html">BMW</a>
+          <a href="carroantigo.html">Carro Antigo</a>
+          <a href="chevrolet.html">chevrolet</a>
+          <a href="Ford.html">Ford</a>
+          <a href="Popular.html">Popular</a>
+          <a href="volkswagem.html">volkswagem</a>
+          
+        </div>
+      </div> 
+      <a href="Contato.html">Contato</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    
+    <div style="padding-left:16px">
+      <h3>Locadoura de Carros</h3>
+    </div>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+        
+    </script>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="imagem/bmw1.jpg" style="width:100%">
+      <div class="text">bmw 1</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="imagem/bmw2.jpg" style="width:100%">
+      <div class="text">BMW 2</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="imagem/2018-06-18-bmw-i3.jpg" style="width:100%">
+      <div class="text">BMW i3</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="imagem/BMW-320i-M-Sport-13.jpg" style="width:100%">
+        <div class="text">BMW 320i sport</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+    <div class="footer">
+        <p>@Os carros sao verdadeiros que te leva onde quiser</p>
+      </div>     
+</body>
+</html>
